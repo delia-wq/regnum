@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGNUM — История</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button class="menu-toggle" id="menu-toggle">REGNUM</button>
+
+    <aside class="side-nav" id="side-nav">
+        <button class="side-close" id="side-close">&times;</button>
+        <a href="index.html" class="side-link">Главная</a>
+        <a href="history.html" class="side-link">История</a>
+        <a href="patent.html" class="side-link">Патент</a>
+        <a href="rules.html" class="side-link">Правила</a>
+        <a href="chats.html" class="side-link">Чаты</a>
+        <a href="contacts.html" class="side-link">Контакты</a>
+        <a href="games.html" class="side-link">Игры</a>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+
+    <section class="history-hero">
+        <h1 class="page-title">Наша история</h1>
+        <p class="page-sub">Нажмите на фотографию, чтобы узнать историю</p>
+
+        <div class="photo-single">
+            <div class="photo-item" data-story="story1">
+                <img src="images/photo2.jpg" alt="Печать Regnum">
+                <span class="photo-caption">Печать Regnum</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="story-modal">
+        <div class="modal-box">
+            <button class="modal-close">&times;</button>
+            <h3 id="modal-title">Заголовок</h3>
+            <p id="modal-text">Текст истории...</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>REGNUM © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
