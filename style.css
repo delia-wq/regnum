@@ -149,7 +149,7 @@ a:hover {
 
 /* ===== ГЛАВНАЯ: ССЫЛКИ (КАНАЛЫ) ===== */
 .home-links {
-    max-width: 1000px; /* Сделали чуть шире, чтобы влезло 5 блоков */
+    max-width: 1000px; 
     margin: 0 auto;
     padding: 40px 24px 100px;
     text-align: center;
@@ -163,7 +163,6 @@ a:hover {
     margin-bottom: 50px;
 }
 
-/* Обновленная сетка для 5 элементов */
 .link-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); 
@@ -179,7 +178,7 @@ a:hover {
     gap: 8px;
     border: 1px solid var(--line);
     background: var(--bg-soft);
-    padding: 26px 16px; /* Чуть уменьшили отступы, чтобы блоки были аккуратнее */
+    padding: 26px 16px; 
     text-align: center;
     transition: border-color 0.3s, background 0.3s, transform 0.3s;
 }
@@ -198,7 +197,7 @@ a:hover {
 }
 
 .link-title {
-    font-size: 0.9rem; /* Чуть уменьшили, чтобы «Канал клана» не переносился */
+    font-size: 0.9rem; 
     letter-spacing: 0.15em;
     color: var(--gold-light);
     text-transform: uppercase;
@@ -560,19 +559,26 @@ a:hover {
 }
 
 /* --- ЦВЕТА ЧАТОВ --- */
+
+/* 1. REG - Бордовый */
 .chat-reg:hover { border-color: #800020; box-shadow: 0 0 30px rgba(128, 0, 32, 0.2); }
 .chat-reg h3 { color: #c45a71; }
 .chat-reg:hover h3 { color: #ff6b8b; }
 
+/* 2. NUM - Темно-синий */
 .chat-num:hover { border-color: #1e3a8a; box-shadow: 0 0 30px rgba(30, 58, 138, 0.2); }
 .chat-num h3 { color: #5c7cfa; }
 .chat-num:hover h3 { color: #91a7ff; }
 
-.chat-aur:hover { border-color: var(--gold); box-shadow: 0 0 30px rgba(201, 164, 74, 0.15); }
-.chat-aur h3 { color: var(--gold); }
+/* 3. AUR - Темно-зеленый */
+.chat-aur:hover { border-color: #14532d; box-shadow: 0 0 30px rgba(20, 83, 45, 0.3); }
+.chat-aur h3 { color: #4ade80; } /* Светло-зеленый для читаемости */
+.chat-aur:hover h3 { color: #86efac; }
 
-.chat-umbra:hover { border-color: #8b6b47; box-shadow: 0 0 30px rgba(139, 107, 71, 0.15); }
-.chat-umbra h3 { color: #a88c6c; }
+/* 4. UMBRA - Темно-фиолетовый */
+.chat-umbra:hover { border-color: #4c1d95; box-shadow: 0 0 30px rgba(76, 29, 149, 0.3); }
+.chat-umbra h3 { color: #a78bfa; } /* Светло-фиолетовый для читаемости */
+.chat-umbra:hover h3 { color: #c4b5fd; }
 
 .chats-note {
     font-size: 0.85rem;
@@ -744,7 +750,7 @@ a:hover {
         grid-template-columns: repeat(2, 1fr);
     }
     .link-grid {
-        grid-template-columns: 1fr; /* На телефоне кнопки встанут в один ровный столбик */
+        grid-template-columns: 1fr;
     }
     .modal-box {
         padding: 28px 22px;
