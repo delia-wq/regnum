@@ -147,9 +147,9 @@ a:hover {
     text-decoration-thickness: 2px;
 }
 
-/* ===== ГЛАВНАЯ: ССЫЛКИ ===== */
+/* ===== ГЛАВНАЯ: ССЫЛКИ (КАНАЛЫ) ===== */
 .home-links {
-    max-width: 900px;
+    max-width: 1000px; /* Сделали чуть шире, чтобы влезло 5 блоков */
     margin: 0 auto;
     padding: 40px 24px 100px;
     text-align: center;
@@ -163,10 +163,11 @@ a:hover {
     margin-bottom: 50px;
 }
 
+/* Обновленная сетка для 5 элементов */
 .link-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); 
+    gap: 16px;
     margin-bottom: 50px;
 }
 
@@ -178,7 +179,7 @@ a:hover {
     gap: 8px;
     border: 1px solid var(--line);
     background: var(--bg-soft);
-    padding: 30px 20px;
+    padding: 26px 16px; /* Чуть уменьшили отступы, чтобы блоки были аккуратнее */
     text-align: center;
     transition: border-color 0.3s, background 0.3s, transform 0.3s;
 }
@@ -197,16 +198,73 @@ a:hover {
 }
 
 .link-title {
-    font-size: 0.95rem;
-    letter-spacing: 0.2em;
+    font-size: 0.9rem; /* Чуть уменьшили, чтобы «Канал клана» не переносился */
+    letter-spacing: 0.15em;
     color: var(--gold-light);
     text-transform: uppercase;
 }
 
 .link-desc {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     color: var(--muted);
     letter-spacing: 0.05em;
+}
+
+/* ===== БЛОК ПРАВИЛ ДЛЯ ВСТУПЛЕНИЯ ===== */
+.join-rules-block {
+    max-width: 600px;
+    margin: 0 auto 50px;
+    padding: 40px 0;
+    border-top: 1px solid var(--line);
+    text-align: left;
+}
+
+.join-title {
+    font-size: 1rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 24px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.join-list {
+    list-style: none;
+    counter-reset: join-step;
+    margin-bottom: 30px;
+}
+
+.join-list li {
+    counter-increment: join-step;
+    padding: 12px 0 12px 45px;
+    position: relative;
+    color: var(--text);
+    border-bottom: 1px solid rgba(201, 164, 74, 0.08);
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+}
+
+.join-list li::before {
+    content: counter(join-step, decimal-leading-zero) ".";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    color: var(--gold-light);
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+.join-note {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .home-btn {
@@ -471,7 +529,7 @@ a:hover {
 
 .chat-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-bottom: 30px;
 }
@@ -479,28 +537,42 @@ a:hover {
 .chat-card {
     border: 1px solid var(--line);
     background: var(--bg-soft);
-    padding: 30px 20px;
+    padding: 30px 24px;
     text-align: center;
-    transition: border-color 0.3s, background 0.3s;
-}
-
-.chat-card:hover {
-    border-color: var(--gold);
-    background: rgba(201, 164, 74, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 180px;
 }
 
 .chat-card h3 {
-    color: var(--gold);
     letter-spacing: 0.3em;
-    font-size: 1.1rem;
-    margin-bottom: 12px;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
     font-weight: 400;
 }
 
 .chat-card p {
     font-size: 0.85rem;
-    color: var(--muted);
+    color: var(--text);
+    line-height: 1.5;
 }
+
+/* --- ЦВЕТА ЧАТОВ --- */
+.chat-reg:hover { border-color: #800020; box-shadow: 0 0 30px rgba(128, 0, 32, 0.2); }
+.chat-reg h3 { color: #c45a71; }
+.chat-reg:hover h3 { color: #ff6b8b; }
+
+.chat-num:hover { border-color: #1e3a8a; box-shadow: 0 0 30px rgba(30, 58, 138, 0.2); }
+.chat-num h3 { color: #5c7cfa; }
+.chat-num:hover h3 { color: #91a7ff; }
+
+.chat-aur:hover { border-color: var(--gold); box-shadow: 0 0 30px rgba(201, 164, 74, 0.15); }
+.chat-aur h3 { color: var(--gold); }
+
+.chat-umbra:hover { border-color: #8b6b47; box-shadow: 0 0 30px rgba(139, 107, 71, 0.15); }
+.chat-umbra h3 { color: #a88c6c; }
 
 .chats-note {
     font-size: 0.85rem;
@@ -670,6 +742,9 @@ a:hover {
     .chat-grid,
     .games-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .link-grid {
+        grid-template-columns: 1fr; /* На телефоне кнопки встанут в один ровный столбик */
     }
     .modal-box {
         padding: 28px 22px;
