@@ -559,25 +559,20 @@ a:hover {
 }
 
 /* --- ЦВЕТА ЧАТОВ --- */
-
-/* 1. REG - Бордовый */
 .chat-reg:hover { border-color: #800020; box-shadow: 0 0 30px rgba(128, 0, 32, 0.2); }
 .chat-reg h3 { color: #c45a71; }
 .chat-reg:hover h3 { color: #ff6b8b; }
 
-/* 2. NUM - Темно-синий */
 .chat-num:hover { border-color: #1e3a8a; box-shadow: 0 0 30px rgba(30, 58, 138, 0.2); }
 .chat-num h3 { color: #5c7cfa; }
 .chat-num:hover h3 { color: #91a7ff; }
 
-/* 3. AUR - Темно-зеленый */
 .chat-aur:hover { border-color: #14532d; box-shadow: 0 0 30px rgba(20, 83, 45, 0.3); }
-.chat-aur h3 { color: #4ade80; } /* Светло-зеленый для читаемости */
+.chat-aur h3 { color: #4ade80; } 
 .chat-aur:hover h3 { color: #86efac; }
 
-/* 4. UMBRA - Темно-фиолетовый */
 .chat-umbra:hover { border-color: #4c1d95; box-shadow: 0 0 30px rgba(76, 29, 149, 0.3); }
-.chat-umbra h3 { color: #a78bfa; } /* Светло-фиолетовый для читаемости */
+.chat-umbra h3 { color: #a78bfa; } 
 .chat-umbra:hover h3 { color: #c4b5fd; }
 
 .chats-note {
