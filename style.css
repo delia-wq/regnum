@@ -304,16 +304,18 @@ a:hover {
     font-size: 0.9rem;
 }
 
-/* ===== ИСТОРИЯ ===== */
+/* ===== ИСТОРИЯ И АРТЕФАКТЫ ===== */
 .history-hero {
     max-width: 900px;
     margin: 0 auto;
     padding: 120px 24px 80px;
 }
 
-.photo-single {
-    max-width: 600px;
-    margin: 0 auto;
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .photo-item {
@@ -323,12 +325,12 @@ a:hover {
 }
 
 .photo-item:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
 }
 
 .photo-item img {
     width: 100%;
-    height: 360px;
+    height: 350px;
     object-fit: cover;
     border: 1px solid var(--line);
     transition: border-color 0.3s, box-shadow 0.3s;
@@ -342,11 +344,12 @@ a:hover {
 
 .photo-caption {
     display: block;
-    margin-top: 14px;
-    font-size: 0.8rem;
-    letter-spacing: 0.2em;
+    margin-top: 16px;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
     color: var(--gold-light);
     text-transform: uppercase;
+    font-weight: 400;
 }
 
 /* ===== МОДАЛЬНОЕ ОКНО ===== */
@@ -737,9 +740,15 @@ a:hover {
     .games-section {
         padding: 100px 18px 60px;
     }
-    .photo-item img {
-        height: 260px;
+    
+    /* Мобильная сетка для артефактов (одна колонка) */
+    .photo-grid {
+        grid-template-columns: 1fr;
     }
+    .photo-item img {
+        height: 300px;
+    }
+
     .chat-grid,
     .games-grid {
         grid-template-columns: repeat(2, 1fr);
