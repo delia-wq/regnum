@@ -24,21 +24,45 @@
 
     <section class="history-hero">
         <h1 class="page-title">Наша история</h1>
-        <p class="page-sub">Нажмите на фотографию, чтобы узнать историю</p>
+        <p class="page-sub">Нажмите на артефакт, чтобы узнать его легенду</p>
 
-        <div class="photo-single">
+        <!-- СЕТКА С 5 АРТЕФАКТАМИ -->
+        <div class="photo-grid">
+            
             <div class="photo-item" data-story="story1">
-                <img src="images/photo2.jpg" alt="Печать Regnum">
-                <span class="photo-caption">Печать Regnum</span>
+                <img src="images/photo2.jpg" alt="Золотая Печать">
+                <span class="photo-caption">Золотая Печать</span>
             </div>
+
+            <div class="photo-item" data-story="story2">
+                <img src="images/photo3.jpg" alt="Венец Теней">
+                <span class="photo-caption">Венец Теней</span>
+            </div>
+
+            <div class="photo-item" data-story="story3">
+                <img src="images/photo4.jpg" alt="Часы Молчание">
+                <span class="photo-caption">Часы «Молчание»</span>
+            </div>
+
+            <div class="photo-item" data-story="story4">
+                <img src="images/photo5.jpg" alt="Ключ от Архива">
+                <span class="photo-caption">Ключ от Архива</span>
+            </div>
+
+            <div class="photo-item" data-story="story5">
+                <img src="images/photo6.jpg" alt="Компас Пустоты">
+                <span class="photo-caption">Компас Пустоты</span>
+            </div>
+
         </div>
     </section>
 
+    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ИСТОРИЙ -->
     <div class="modal" id="story-modal">
         <div class="modal-box">
             <button class="modal-close">&times;</button>
-            <h3 id="modal-title">Печать Regnum</h3>
-            <p id="modal-text">Текст истории...</p>
+            <h3 id="modal-title"></h3>
+            <p id="modal-text"></p>
         </div>
     </div>
 
